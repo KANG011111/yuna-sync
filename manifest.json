@@ -1,0 +1,19 @@
+{
+  "name": "HYPER SYNC - 虛擬偶像銳舞派對",
+  "short_name": "HYPER SYNC",
+  "description": "虛擬偶像YUNA SYNC銳舞派對，虛擬意識接管派對，聲光同步，全場Sync",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#8A4FFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "lang": "zh-TW"
+}

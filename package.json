@@ -1,0 +1,33 @@
+{
+  "name": "hyper-sync-website",
+  "version": "1.0.0",
+  "description": "HYPER SYNC - 虛擬偶像銳舞派對官方網站",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server --port=8000",
+    "lint": "htmlhint index.html && stylelint css/style.css",
+    "build": "echo 'Building static site...' && echo 'Build complete!'",
+    "deploy": "echo 'Deploying to production...'"
+  },
+  "keywords": [
+    "virtual-idol",
+    "concert",
+    "website",
+    "yuna-sync",
+    "edm",
+    "rave-party"
+  ],
+  "author": "YUNA SYNC Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.10.3",
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
