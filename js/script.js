@@ -157,55 +157,34 @@ function addParticleCSS() {
     document.head.appendChild(style);
 }
 
-// 響應式視頻處理
+// 響應式 Vimeo 播放器處理
 function handleResponsiveVideo() {
-    const video = document.querySelector('.hero-video video');
-    if (!video) return;
+    const videoContainer = document.querySelector('.hero-video');
+    if (!videoContainer) return;
     
-    // 檢查用戶網路狀況和偏好
-    if (navigator.connection) {
-        const connection = navigator.connection;
-        const isSlowConnection = connection.effectiveType === 'slow-2g' || 
-                               connection.effectiveType === '2g' ||
-                               connection.saveData === true;
-        
-        if (isSlowConnection) {
-            video.preload = 'none';
-            console.log('偵測到慢速網路，影片設為手動播放');
-        }
-    }
-    
-    function resizeVideo() {
+    function resizeVideoContainer() {
         const windowWidth = window.innerWidth;
         
         if (windowWidth <= 480) {
-            video.style.width = '90vw';
-            video.style.height = '180px';
+            videoContainer.style.width = '95%';
+            videoContainer.style.top = '30px';
         } else if (windowWidth <= 768) {
-            video.style.width = '90vw';
-            video.style.height = '200px';
+            videoContainer.style.width = '90%';
+            videoContainer.style.top = '40px';
         } else if (windowWidth <= 1024) {
-            video.style.width = '80vw';
-            video.style.height = '250px';
+            videoContainer.style.width = '80%';
+            videoContainer.style.top = '50px';
         } else {
-            video.style.width = '560px';
-            video.style.height = '314px';
+            videoContainer.style.width = '90%';
+            videoContainer.style.maxWidth = '560px';
+            videoContainer.style.top = '50px';
         }
     }
     
-    resizeVideo();
-    window.addEventListener('resize', resizeVideo);
+    resizeVideoContainer();
+    window.addEventListener('resize', resizeVideoContainer);
     
-    // 添加影片載入錯誤處理
-    video.addEventListener('error', function() {
-        console.error('影片載入失敗');
-        this.style.display = 'none';
-    });
-    
-    // 影片載入完成後的處理
-    video.addEventListener('loadedmetadata', function() {
-        console.log('影片載入完成');
-    });
+    console.log('Vimeo 播放器已初始化');
 }
 
 // 票券按鈕點擊效果（保留漣漪效果）
