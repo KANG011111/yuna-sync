@@ -287,33 +287,6 @@ function createScrollProgress() {
     });
 }
 
-// 主題切換功能（預留）
-function initializeThemeToggle() {
-    // 預留給未來的主題切換功能
-    const themeToggle = document.createElement('button');
-    themeToggle.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: rgba(138, 79, 255, 0.2);
-        border: 1px solid rgba(138, 79, 255, 0.5);
-        color: #8A4FFF;
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        z-index: 1000;
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-    `;
-    themeToggle.innerHTML = '🌙';
-    themeToggle.title = '主題切換（即將推出）';
-    
-    themeToggle.addEventListener('click', () => {
-        alert('主題切換功能即將推出！');
-    });
-    
-    document.body.appendChild(themeToggle);
-}
 
 // 載入動畫
 function showLoadingAnimation() {
@@ -385,7 +358,6 @@ function initialize() {
         handleTicketButtons();
         addRippleCSS();
         createScrollProgress();
-        initializeThemeToggle();
         
         // 初始化滾動事件
         window.addEventListener('scroll', () => {
