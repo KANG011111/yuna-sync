@@ -1,9 +1,7 @@
 {
   "name": "hyper-sync-website",
   "type": "static",
-  "buildCommand": "npm run build",
   "outputDirectory": "./",
-  "installCommand": "npm install",
   "framework": "static",
   "routes": [
     {
