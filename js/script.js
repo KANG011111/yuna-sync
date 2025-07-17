@@ -1,4 +1,4 @@
-// 平滑滾動功能
+// 平滑滾動功能（保留給其他用途）
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -208,14 +208,12 @@ function handleResponsiveVideo() {
     });
 }
 
-// 票券按鈕點擊效果
+// 票券按鈕點擊效果（保留漣漪效果）
 function handleTicketButtons() {
     const ticketButtons = document.querySelectorAll('.ticket-button');
     
     ticketButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             // 創建點擊效果
             const ripple = document.createElement('div');
             ripple.style.cssText = `
@@ -238,8 +236,7 @@ function handleTicketButtons() {
                 ripple.remove();
             }, 600);
             
-            // 這裡可以添加實際的購票邏輯
-            alert('購票功能即將開放！');
+            // 現在直接跳轉到 Facebook 頁面
         });
     });
 }

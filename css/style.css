@@ -217,6 +217,9 @@ html {
     box-shadow: 0 10px 30px rgba(138, 79, 255, 0.3);
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -763,6 +766,9 @@ html {
     position: relative;
     z-index: 2;
     margin-top: auto;
+    text-decoration: none;
+    display: block;
+    text-align: center;
     flex-shrink: 0;
 }
 
